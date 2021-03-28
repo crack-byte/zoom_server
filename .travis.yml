@@ -1,0 +1,10 @@
+language: java
+jdk:
+  - openjdk8
+script:
+  - "./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V"
+deploy:
+  api_key:
+    secure: NbAwjsRMsu0nPKGwGkJ81EoOmNm3Ibk4hhkYJm8ZbT95hwE4JrNsC6lPAVfmerRGTrJRb2ITKVyVNy4dT2RDkju4GD4F7gygOrlUezbiyK9bytXEdClBXdr54TtwYUOezyo53gltNoXfqRjB+rBfh31Y9lAIt2vdzXU40xtToJnxj7m5JJdiJ6dUONcHjTVdPuHJKPP77BVT8+y/k8UvsdDtuciek/M5LJ1x/IWVLjPYJTzQis1Yd2O9QU2P6t9v2oxHqTf9HIvStNNdRMQ5rHOnvb5mGK3VhBHZir6xtc+goWKgL217axivkKlYYG9KaRId0Jty7rrUjAn+3LVZVTxD8Yanb5U0acpR0KDUMeEMWAy+ImgdLg/cT9ypjrUI8HkbEYfY5vwL2NlJNSDLbqlMgGh13wbtyR1fvsd+8+3CcTfeHBNcbSBEgPP6tOVQ6DUHQWb37dkXyG12MqX2PRRi+YHgp0ZfQCn7z8Meh+Lt+rZL9GeOxmbYBvCzGABPXEYaZXtocxVLwuJgrU60svJMTzrGO0m3CQHZu76/9EmiWjD+6kbL3XLk59T4fRbTgVs8lVqXHJEARMc9mixAa5zRAVrHoKL2cUDVMrGaeB3dYxEpqnXrEPCKEqROeB9lmIpxz1OzzanUu3Jac8hkSkuDCIKMCT3zgQSJabuvTkc=
+app:
+  staging: zoom-webserver
