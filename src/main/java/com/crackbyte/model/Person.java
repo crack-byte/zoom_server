@@ -11,7 +11,7 @@ import javax.persistence.Enumerated;
 @Getter
 @Setter
 @Entity
-public class User extends BusinessObject {
+public class Person extends BusinessObject {
 
     private String firstName;
     private String lastName;
