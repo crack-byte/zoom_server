@@ -21,7 +21,7 @@ public class ShowDetailsController {
 
     @GetMapping
     public ResponseEntity<Object> getShows(@RequestParam String q) {
-        log.info("fetching details : {}......", q);
+        log.info("fetching details for {}......", q);
         ShowDetailsDTO data = tvShowsService.searchShowDetails(q);
         return new ResponseEntity<>(data, HttpStatus.OK);
     }
