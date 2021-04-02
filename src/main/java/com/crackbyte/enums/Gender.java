@@ -1,4 +1,4 @@
-package com.crackbyte;
+package com.crackbyte.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

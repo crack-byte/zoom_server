@@ -52,5 +52,7 @@ public class TvShowDTO {
     public List<String> pictures = null;
     @JsonProperty("episodes")
     public List<Episode> episodes = null;
+    @JsonProperty("images")
+    public List<ImageDTO> images = null;
 
 }
