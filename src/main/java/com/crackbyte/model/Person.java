@@ -1,6 +1,6 @@
 package com.crackbyte.model;
 
-import com.crackbyte.Gender;
+import com.crackbyte.enums.Gender;
 import lombok.Getter;
 import lombok.Setter;
 
