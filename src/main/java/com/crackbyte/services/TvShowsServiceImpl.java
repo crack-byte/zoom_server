@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -62,13 +61,12 @@ public class TvShowsServiceImpl implements TvShowsService {
         ShowDetailsDTO showDetailsDTO = restTemplate.getForObject(builder.encode().toUriString(), ShowDetailsDTO.class);
         if (showDetailsDTO != null && showDetailsDTO.getTvShow() != null && showDetailsDTO.getTvShow().getPictures() != null) {
             TvShowDTO tvShow = showDetailsDTO.getTvShow();
-            List<String> pictures = tvShow
-                    .getPictures();
+            List<String> pictures = tvShow.getPictures();
             if (pictures != null && !pictures.isEmpty()) {
-                tvShow.setImages(pictures.stream()
+                tvShow.setImages(pictures.parallelStream()
                         .map(ImageDTO::getImageObject)
                         .collect(Collectors.toList()));
-            }else {
+            } else {
                 tvShow.setImages(Collections.singletonList(ImageDTO.getImageObject(tvShow.getImagePath())));
             }
         }

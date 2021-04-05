@@ -2,6 +2,8 @@ package com.crackbyte.controller;
 
 import com.crackbyte.dto.ShowsDTO;
 import com.crackbyte.services.TvShowsServiceImpl;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.Tag;
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+@Api(value = "Shows Controller",tags = "shows")
 @AllArgsConstructor
 @RestController
 @RequestMapping("/shows")
